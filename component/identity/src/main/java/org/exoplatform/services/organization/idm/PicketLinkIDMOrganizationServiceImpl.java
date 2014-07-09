@@ -218,6 +218,7 @@ public class PicketLinkIDMOrganizationServiceImpl extends BaseOrganizationServic
         } catch (Exception e1) {
             log.warn("Error during recovery of old error", e1);
         }
+        throw new RuntimeException("IDM error Cause: " + e, e);
     }
 
     public Config getConfiguration() {
